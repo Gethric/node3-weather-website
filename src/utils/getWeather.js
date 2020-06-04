@@ -16,6 +16,9 @@ const getWeather = (lat, lon, callback) => {
 			callback(undefined, {
 				temp: body.current.temperature,
 				feelsLike: body.current.feelslike,
+				description: body.current.weather_descriptions,
+				rain: body.current.precip,
+				wind: body.current.wind_dir,
 			});
 		}
 	});
